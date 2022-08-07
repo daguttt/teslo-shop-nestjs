@@ -11,6 +11,18 @@ export class Product {
   title: string;
 
   @Column({
+    type: 'numeric',
+    default: 0,
+  })
+  price: number;
+
+  @Column({
+    type: 'text',
+    nullable: true,
+  })
+  description: string;
+
+  @Column({
     type: 'text',
     unique: true,
   })

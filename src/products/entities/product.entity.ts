@@ -9,4 +9,26 @@ export class Product {
     unique: true,
   })
   title: string;
+
+  @Column({
+    type: 'text',
+    unique: true,
+  })
+  slug: string;
+
+  @Column('int', {
+    default: 0,
+  })
+  stock: number;
+
+  @Column('text', {
+    array: true,
+  })
+  sizes: string[];
+
+  @Column('text')
+  gender: string;
+
+  // tags
+  // images
 }
